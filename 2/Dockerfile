@@ -6,8 +6,8 @@ RUN pip install python-dateutil
 
 ADD https://github.com/s3tools/s3cmd/releases/download/v2.0.1/s3cmd-2.0.1.tar.gz /opt/
 
-RUN tar zxf /opt/s3cmd-2.0.1.tar.gz -C /opt
+RUN tar zxf /opt/s3cmd-2.0.1.tar.gz -C /opt && ln -s /opt/s3cmd-2.0.1/s3cmd /usr/bin/s3cmd
 
 ADD ./s3cfg /root/.s3cfg
 
-ENTRYPOINT ["/opt/s3cmd-2.0.1/s3cmd"]
+ENTRYPOINT ["/usr/bin/s3cmd"]
