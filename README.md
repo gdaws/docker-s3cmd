@@ -19,6 +19,12 @@ ERROR: Configuration file not available.
 ERROR: Consider using --configure parameter to create one.
 ```
 
+## Pull Usage
+
+```
+docker pull gdaws/s3cmd:latest
+```
+
 ## Run Usage
 
 All usage cases depend on the use of environment variables and mounted volume(s).
